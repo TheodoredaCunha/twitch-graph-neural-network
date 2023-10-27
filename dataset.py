@@ -64,3 +64,5 @@ class TwitchDataset(Dataset):
         data = torch.load(os.path.join(self.processed_dir, 
                                  f'data_{idx}.pt'))   
         return data
+    
+print("hello world")

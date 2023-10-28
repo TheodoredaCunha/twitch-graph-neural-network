@@ -9,7 +9,7 @@ import numpy as np
 import os
 import pandas as pd
 import json
-import configparser
+
 
 class TwitchDataset(Dataset):
     def __init__(self, root, transform = None, pre_transform = None):
@@ -66,7 +66,3 @@ class TwitchDataset(Dataset):
                                  f'data_{idx}.pt'))   
         return data
 
-config = configparser.ConfigParser()
-config.read('config.ini')
-folder_path = config["dataset"]["folder_path"]
-dataset = TwitchDataset(folder_path)

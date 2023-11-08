@@ -23,7 +23,7 @@ class TwitchDataset(Dataset):
         twitch_target.csv stores labels (binary)
         """
 
-        return ['twitch_edges.json', 'twitch_target.csv']
+        return ['twitch_edges_undersampled.json', 'twitch_target_undersampled.csv']
     
     @property
     def processed_file_names(self):
